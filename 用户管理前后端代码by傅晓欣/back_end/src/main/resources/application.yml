@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: back_end
+  datasource:
+    url: jdbc:mysql://localhost:3306/user?useSSL=false&serverTimezone=UTC
+    username: root
+    password: qq060606
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8089
+  error:
+    whitelabel:
+      enabled: false
+
+mybatis:
+  mapper-locations: classpath:mapperImpl/*.xml
+  type-aliases-package: org.example.back_end.po
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+logging:
+  level:
+    org.example.back_end: DEBUG
